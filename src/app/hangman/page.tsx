@@ -79,7 +79,7 @@ export default function KPIHangmanGame() {
 
   useEffect(() => {
     const shuffled = [...questions].sort(() => 0.5 - Math.random());
-    setQuiz(shuffled.slice(0, 6));
+    setQuiz(shuffled.slice(0, 10));
   }, []);
 
   const handleAnswer = (option: string) => {
@@ -123,7 +123,7 @@ export default function KPIHangmanGame() {
 
   return (
     <div className="min-h-screen bg-gray-100 p-6 flex flex-col items-center justify-start">
-      <h1 className="text-2xl font-bold mb-4 text-center">🎯 KPI Hangman Challenge</h1>
+      <h1 className="text-2xl font-bold mb-4 text-center">🎯 Interesting facts Challenge</h1>
       <div className="w-full max-w-md">
         {renderHangman()}
 
@@ -140,7 +140,7 @@ export default function KPIHangmanGame() {
                 exit={{ opacity: 0, y: -10 }}
                 className="bg-white p-4 rounded-xl shadow-lg mb-4"
               >
-                <h2 className="text-lg font-semibold mb-2">
+                <h2 className="text-lg text-black font-semibold mb-2">
                   {quiz[currentQ].question}
                 </h2>
                 <div className="flex flex-col gap-2">
